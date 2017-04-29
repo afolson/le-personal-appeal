@@ -1,0 +1,16 @@
+{
+	"manifest_version": 2,
+	"name": "Le Personal Appeal",
+	"description": "A Google Chrome extension to add a personal appeal to every site.",
+	"version": "1.0",
+	"web_accessible_resources": ["personalappeal.png"],
+	"content_scripts": 
+	[
+		{
+			"matches": ["*://*/*"],
+			"exclude_matches": ["*://localhost/*"],
+			"js": ["appeal.js"],
+			"run_at": "document_end"
+		}
+	]
+}
